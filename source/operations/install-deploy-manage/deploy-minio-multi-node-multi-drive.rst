@@ -1,4 +1,5 @@
 .. _deploy-minio-distributed:
+.. _minio_mnmd:
 
 ====================================
 Deploy MinIO: Multi-Node Multi-Drive
