@@ -1,3 +1,5 @@
+.. _minio-snmd:
+
 =====================================
 Deploy MinIO: Single-Node Multi-Drive
 =====================================
@@ -9,11 +11,11 @@ Deploy MinIO: Single-Node Multi-Drive
    :depth: 2
 
 The procedures on this page cover deploying MinIO in a Single-Node Multi-Drive (SNMD) configuration.
-This topology provides increased drive-level reliability and failover protection as compared to :ref:`Single-Node Single-Drive (SNSD) deployments <minio_snsd>`.
+This topology provides increased drive-level reliability and failover protection as compared to :ref:`Single-Node Single-Drive (SNSD) deployments <minio-snsd>`.
 
 .. cond:: linux or macos or windows
 
-   For production environments, MinIO strongly recommends deploying  with the :ref:`Multi-Node Multi-Drive (Distributed) <minio_mnmd>` topology.
+   For production environments, MinIO strongly recommends deploying  with the :ref:`Multi-Node Multi-Drive (Distributed) <minio-mnmd>` topology.
 
 .. cond:: container
 
@@ -48,19 +50,7 @@ Local JBOD Storage with Sequential Mounts
 Deploy Single-Node Multi-Drive MinIO
 ------------------------------------
 
-The following procedure deploys MinIO consisting of a single MinIO server and a single drive or storage volume.
-
-.. admonition:: Network File System Volumes Break Consistency Guarantees
-   :class: note
-
-   MinIO's strict **read-after-write** and **list-after-write** consistency
-   model requires local disk filesystems (``xfs``, ``ext4``, etc.).
-
-   MinIO cannot provide consistency guarantees if the underlying storage
-   volumes are NFS or a similar network-attached storage volume. 
-
-   For deployments that *require* using network-attached storage, use
-   NFSv4 for best results.
+The following procedure deploys MinIO consisting of a single MinIO server and a multiple drives or storage volumes.
 
 .. cond:: linux
 

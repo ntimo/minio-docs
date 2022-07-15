@@ -34,7 +34,7 @@ Multi-Node Multi-Drive (MNMD or "Distributed")
   Multiple MinIO servers with at least four drives across all servers. 
   The distributed |MNMD| topology supports production-grade object storage with drive and node-level availability and resiliency.
 
-This documentation provides instructions for |SNSD| and |SNMD| for supporting local development and evaluation of MinIO on a single host machine. For |MNMD| deployments use the MinIO Kubernetes Operator to deploy and manage MinIO tenants in a containerized and orchestrated environment.
+This documentation provides instructions for |SNSD| and |SNMD| for supporting local development and evaluation of MinIO on a single host machine. For |MNMD| deployments, use the MinIO Kubernetes Operator to deploy and manage MinIO tenants in a containerized and orchestrated environment.
 
 .. _minio-installation-platform-support:
 
@@ -46,10 +46,9 @@ MinIO provides container images at the following repositories:
 - https://hub.docker.com/r/minio/minio
 - https://quay.io/repository/minio/minio?tab=info
 
-MinIO provides instructions for both the `Docker <https://www.docker.com/>`__ and :podman-docs:`Podman <>` container management tools. 
-MinIO's published container images may work with unlisted container interfaces.
+Use of MinIO images from any other repository, host, or organization is at your own risk.
 
-Defer to the official documentation for your preferred container interface for instructions on installation or configuration on your local host machine.
+The :ref:`Single-Node Single-Drive <minio-snsd>` and :ref:`Single-Node Multi-Drive <minio-snmd>` tutorials provide instructions for the `Docker <https://www.docker.com/>`__ and :podman-docs:`Podman <>` container managers.
 
 .. toctree::
    :titlesonly:
